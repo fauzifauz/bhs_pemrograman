@@ -1,0 +1,55 @@
+@startuml
+
+start
+
+:User opens program;
+
+if (User selects Makanan) then (yes)
+  if (User selects MP KAVAN) then (yes)
+    :Display MP KAVAN price;
+  else (no)
+    if (User selects Pecel Lele) then (yes)
+      :Display Pecel Lele price;
+    else (no)
+      goto end
+    endif
+  endif
+else (no)
+  if (User selects Minuman) then (yes)
+    if (User selects Nasi Goreng) then (yes)
+      :Display Nasi Goreng price;
+    else (no)
+      goto end
+    endif
+  else (no)
+    goto end
+  endif
+endif
+
+:User confirms order;
+
+:Program prints order summary;
+
+if (User selects kembali) then (yes)
+  goto start
+else (no)
+  if (User selects exit) then (yes)
+    stop
+  else (no)
+    goto end
+  endif
+endif
+
+:Program asks for payment;
+
+:User pays;
+
+if (Payment is accepted) then (yes)
+  :Program prints receipt;
+else (no)
+  :Program asks for alternative payment;
+endif
+
+end
+
+@enduml

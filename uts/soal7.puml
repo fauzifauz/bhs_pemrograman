@@ -1,0 +1,44 @@
+@startuml
+start
+
+:menu();
+:display "Pilih operasi aritmatika:";
+:display "1. Penjumlahan";
+:display "2. Pengurangan";
+:display "3. Perkalian";
+:display "4. Pembagian";
+
+:tambah();
+:display "Masukkan Angka Pertama : ";
+:input a;
+:display "Masukkan Angka Kedua : ";
+:input b;
+:display "Penjumlahan: " + (a + b);
+
+:kurang();
+:display "Masukkan Angka Pertama : ";
+:input a;
+:display "Masukkan Angka Kedua : ";
+:input b;
+:display "Pengurangan : " + (a - b);
+
+:kali();
+:display "Masukkan Angka Pertama : ";
+:input a;
+:display "Masukkan Angka Kedua : ";
+:input b;
+:display "Perkalian : " + (a * b);
+
+:bagi();
+:display "Masukkan Angka Pertama : ";
+:input a;
+:display "Masukkan Angka Kedua : ";
+:input b;
+if (b == 0) then (yes)
+    :display "Pembagian : Tidak bisa dibagi dengan nol";
+else (no)
+    :display "Pembagian : " + (a / b);
+endif
+
+stop
+@enduml

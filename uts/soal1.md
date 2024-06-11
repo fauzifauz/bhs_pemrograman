@@ -1,0 +1,1 @@
+1.Suatu metode strategi, atau teknik penulisan progam dalam bahasa pemograman tetentu untuk mengetahui suatu masalah
